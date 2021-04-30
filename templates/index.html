@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Class Demo</title>
+    <link rel ="stylesheet" href="{{ url_for('static', filename='css/index.css')  }}" type="text/css">
+</head>
+<body>
+
+<h4>Calculator App</h4>
+
+<form action ="/calculate" method ="POST">
+
+    <select name ="operation">
+
+        <option value ="addition"> Addition </option>
+        <option value ="subtraction"> Subtraction </option>
+        <option value ="multiplication"> Multiplication </option>
+        <option value ="division"> Division </option>
+
+    </select>
+
+    <input type ="number" name ="num1" placeholder="Enter a name">
+    <input type ="number" name ="num2" placeholder="Enter another name">
+    <button type="submit">Calculate</button>
+    <input type ="number" name= "ans" value={{result}} placeholder ="The result is" disabled>
+
+
+
+</form>
+
+
+</body>
+</html>
